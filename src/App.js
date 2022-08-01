@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import web3 from 'web3';
+import Web3 from 'web3';
+import {contractAbi, contractAddress} from './utils/constants';
+
+const web3 = new Web3("ws://localhost:8545")
+const tokenContract = new web3.eth.Contract(contractAbi, contractAddress);
 
 function App() {
   return (
