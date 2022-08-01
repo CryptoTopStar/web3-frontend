@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import web3 from 'web3';
 
 function App() {
   return (
