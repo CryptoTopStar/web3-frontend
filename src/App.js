@@ -7,6 +7,9 @@ const web3 = new Web3("ws://localhost:8545")
 const tokenContract = new web3.eth.Contract(contractAbi, contractAddress);
 
 function App() {
+
+  const balanceOfMyToken = tokenContract.methods.balanceOf().call();
+  console.log(balanceOfMyToken);
   return (
     <div className="App">
       <header className="App-header">
@@ -22,6 +25,7 @@ function App() {
         >
           Learn React
         </a>
+        <h2>{balanceOfMyToken}</h2>
       </header>
     </div>
   );
